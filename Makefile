@@ -48,7 +48,7 @@ DOCKER_RUN_OPTS += -e SETTINGS_XML=$(SETTINGS_XML)
 endif
 
 ifdef LOCAL_BUILD
-DOCKER_RUN_OPTS += -v \$HOME/.m2:/home/$(UNAME)/.m2:rw
+DOCKER_RUN_OPTS += -v $$HOME/.m2:/home/$(UNAME)/.m2:rw
 endif
 
 COMMIT_HASH := $(shell git --no-pager log -1 --pretty=format:"%h")
