@@ -9,8 +9,8 @@ build('messages-proto', 'docker-host') {
     def gitUtils
     runStage('load pipeline') {
         env.JENKINS_LIB = "build_utils/jenkins_lib"
-        pipeDefault = load("\${env.JENKINS_LIB}/pipeDefault.groovy")
-        gitUtils = load("\${env.JENKINS_LIB}/gitUtils.groovy")
+        pipeDefault = load("${env.JENKINS_LIB}/pipeDefault.groovy")
+        gitUtils = load("${env.JENKINS_LIB}/gitUtils.groovy")
     }
 
     pipeDefault() {
