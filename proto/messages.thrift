@@ -9,6 +9,8 @@ typedef base.ID ConversationId
 
 struct User {
     1: required UserId user_id
+    2: required string email
+    3: required string fullname
 }
 
 struct Message {
