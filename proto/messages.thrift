@@ -39,10 +39,6 @@ exception ConversationsNotFound {
     1: required list<ConversationId> ids
 }
 
-exception UsersNotProvided {
-    1: required list<UserId> ids
-}
-
 struct GetConversationResponse {
     1: required list<Conversation> conversations
     2: required map<UserId, User> users
@@ -53,7 +49,6 @@ service MessageService {
     GetConversationResponse GetConversations(1: list<ConversationId> conversation_ids, 2: ConversationFilter filter)
         throws (1: ConversationsNotFound ex)
 
-    void SaveConversations(1: list<Conversation> conversations, 2: list<User> users)
-        throws (1: UsersNotProvided ex)
+    void SaveConversations(1: list<Conversation> conversations, 2: User user)
 
 }
