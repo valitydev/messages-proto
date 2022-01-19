@@ -1,6 +1,6 @@
 include "base.thrift"
 
-namespace java com.rbkmoney.damsel.messages
+namespace java dev.vality.damsel.messages
 namespace erlang messages
 
 typedef base.ID UserId

@@ -1,4 +1,4 @@
-namespace java com.rbkmoney.damsel.messages.base
+namespace java dev.vality.damsel.messages.base
 namespace erlang messages_base
 
 /**
